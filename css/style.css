@@ -1265,6 +1265,32 @@ p {
     margin-bottom: 0.5rem;
 }
 
+/* About Stats */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-stats .stat-item {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
 /* ============================================
    CONTACT PAGE
    ============================================ */
