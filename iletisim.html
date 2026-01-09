@@ -132,51 +132,58 @@
                 <!-- Contact Form -->
                 <div class="contact-form">
                     <h3>Teklif Formu</h3>
-                    <form id="contactForm">
+                    <!-- GOOGLE FORMS AYARLARI:
+                         1. action URL'sini kendi Google Form URL'inle değiştir (formResponse ile biten)
+                         2. entry.XXXXXX değerlerini kendi form entry ID'lerinle değiştir
+                    -->
+                    <form id="contactForm"
+                          action="https://docs.google.com/forms/d/e/FORM_ID_BURAYA/formResponse"
+                          method="POST"
+                          target="hidden_iframe">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Adınız Soyadınız *</label>
-                                <input type="text" id="name" name="name" required placeholder="Örnek: Ahmet Yılmaz">
+                                <input type="text" id="name" name="entry.111111111" required placeholder="Örnek: Ahmet Yılmaz">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Telefon *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="0500 000 00 00">
+                                <input type="tel" id="phone" name="entry.222222222" required placeholder="0500 000 00 00">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">E-posta *</label>
-                            <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="entry.333333333" placeholder="ornek@email.com">
                         </div>
 
                         <div class="form-group">
                             <label for="service">İlgilendiğiniz Hizmet</label>
-                            <select id="service" name="service">
+                            <select id="service" name="entry.444444444">
                                 <option value="">Seçiniz</option>
-                                <option value="alarm">Alarm Sistemleri</option>
-                                <option value="kamera">Güvenlik Kameraları</option>
-                                <option value="yangin">Yangın Algılama</option>
-                                <option value="erisim">Erişim Kontrol</option>
-                                <option value="interkom">Video İnterkom</option>
-                                <option value="diger">Diğer</option>
+                                <option value="Alarm Sistemleri">Alarm Sistemleri</option>
+                                <option value="Güvenlik Kameraları">Güvenlik Kameraları</option>
+                                <option value="Yangın Algılama">Yangın Algılama</option>
+                                <option value="Erişim Kontrol">Erişim Kontrol</option>
+                                <option value="Video İnterkom">Video İnterkom</option>
+                                <option value="Diğer">Diğer</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="location">Konum Türü</label>
-                            <select id="location" name="location">
+                            <select id="location" name="entry.555555555">
                                 <option value="">Seçiniz</option>
-                                <option value="ev">Ev / Konut</option>
-                                <option value="isyeri">İş Yeri / Ofis</option>
-                                <option value="fabrika">Fabrika / Üretim Tesisi</option>
-                                <option value="depo">Depo / Antrepo</option>
-                                <option value="diger">Diğer</option>
+                                <option value="Ev / Konut">Ev / Konut</option>
+                                <option value="İş Yeri / Ofis">İş Yeri / Ofis</option>
+                                <option value="Fabrika / Üretim Tesisi">Fabrika / Üretim Tesisi</option>
+                                <option value="Depo / Antrepo">Depo / Antrepo</option>
+                                <option value="Diğer">Diğer</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Mesajınız</label>
-                            <textarea id="message" name="message" placeholder="Güvenlik ihtiyaçlarınız hakkında bilgi veriniz..."></textarea>
+                            <textarea id="message" name="entry.666666666" placeholder="Güvenlik ihtiyaçlarınız hakkında bilgi veriniz..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">
@@ -186,6 +193,7 @@
                             </svg>
                         </button>
                     </form>
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
                 </div>
             </div>
         </div>

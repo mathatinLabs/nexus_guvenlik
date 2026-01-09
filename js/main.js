@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form
+    // Contact form (Google Forms integration)
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Formunuz gönderildi. Teşekkürler!');
-            contactForm.reset();
+        contactForm.addEventListener('submit', function() {
+            // Form Google Forms'a gönderiliyor (iframe üzerinden)
+            setTimeout(function() {
+                alert('Formunuz başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+                contactForm.reset();
+            }, 500);
         });
     }
 
