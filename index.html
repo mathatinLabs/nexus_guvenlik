@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus Güvenlik - Profesyonel güvenlik sistemleri, alarm, kamera ve erişim kontrol çözümleri.">
+    <title>Nexus Güvenlik - Profesyonel Güvenlik Sistemleri</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Nexus <span>Güvenlik</span></span>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="active">Ana Sayfa</a>
+                    <a href="hizmetler.html">Hizmetler</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="iletisim.html">İletişim</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="tel:+905001234567" class="header-phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>0500 123 45 67</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <!-- Text Slides -->
+                    <div class="hero-slides" id="heroSlides">
+                        <div class="hero-slide active">
+                            <div class="hero-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                                </svg>
+                                Ev Güvenliği
+                            </div>
+                            <h1 class="hero-title">Eviniz <span>Güvende</span></h1>
+                            <p class="hero-description">Nexus Güvenlik ile ailenizi ve yuvanızı koruma altına alın. Akıllı alarm sistemleri ve 7/24 izleme hizmeti.</p>
+                        </div>
+                        <div class="hero-slide">
+                            <div class="hero-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                                </svg>
+                                İş Yeri Güvenliği
+                            </div>
+                            <h1 class="hero-title">İşletmeniz İçin <span>Akıllı Güvenlik</span></h1>
+                            <p class="hero-description">Ofisinizi, mağazanızı veya deponuzu 7/24 koruma altına alın. Esnek ve güvenilir çözümler.</p>
+                        </div>
+                        <div class="hero-slide">
+                            <div class="hero-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                                </svg>
+                                Kamera Sistemleri
+                            </div>
+                            <h1 class="hero-title">Güvenebileceğiniz <span>Teknoloji</span></h1>
+                            <p class="hero-description">Akıllı kamera teknolojisi ile iç ve dış mekanlarda net görüntü ve güvenilir koruma sağlayın.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="iletisim.html" class="btn btn-primary">
+                            Ücretsiz Keşif
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="hizmetler.html" class="btn btn-secondary">Hizmetlerimiz</a>
+                    </div>
+
+                    <!-- Slider Navigation -->
+                    <div class="hero-nav">
+                        <button class="hero-nav-btn" id="heroPrev">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hero-dots" id="heroDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="hero-nav-btn" id="heroNext">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Mutlu Müşteri</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Yıllık Deneyim</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7/24</div>
+                            <div class="stat-label">Destek</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Slider -->
+                <div class="hero-image">
+                    <div class="hero-image-slides" id="heroImages">
+                        <img src="images/hero/hero-main.webp" alt="Ev güvenliği" class="active">
+                        <img src="images/hero/hero-commercial.webp" alt="İş yeri güvenliği">
+                        <img src="images/services/camera.webp" alt="Kamera sistemleri">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                    Hizmetlerimiz
+                </div>
+                <h2 class="section-title">Kapsamlı Güvenlik Çözümleri</h2>
+                <p class="section-description">Ev ve iş yerleriniz için profesyonel güvenlik sistemleri kurulumu ve bakımı.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Alarm Sistemleri</h3>
+                    <p>Kablosuz ve kablolu alarm sistemleri ile evinizi ve iş yerinizi 7/24 koruma altına alın.</p>
+                    <a href="hizmetler.html#alarm" class="service-link">Detaylı Bilgi →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Güvenlik Kameraları</h3>
+                    <p>HD ve 4K çözünürlüklü IP kameralar ile her anı kayıt altına alın, uzaktan izleyin.</p>
+                    <a href="hizmetler.html#kamera" class="service-link">Detaylı Bilgi →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Yangın Algılama</h3>
+                    <p>Duman ve ısı dedektörleri ile yangın risklerine karşı erken uyarı sistemi.</p>
+                    <a href="hizmetler.html#yangin" class="service-link">Detaylı Bilgi →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Erişim Kontrol</h3>
+                    <p>Kart, şifre veya biyometrik sistemlerle giriş-çıkış kontrolü sağlayın.</p>
+                    <a href="hizmetler.html#erisim" class="service-link">Detaylı Bilgi →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3>Video İnterkom</h3>
+                    <p>Görüntülü kapı zili ve interkom sistemleri ile ziyaretçilerinizi görüntüleyin.</p>
+                    <a href="hizmetler.html#interkom" class="service-link">Detaylı Bilgi →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--secondary)">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Kurulum & Bakım</h3>
+                    <p>Profesyonel kurulum ve düzenli bakım hizmetleri ile sistemleriniz her zaman çalışır.</p>
+                    <a href="hizmetler.html#kurulum" class="service-link">Detaylı Bilgi →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-image">
+                    <img src="images/about/installation.webp" alt="Profesyonel kurulum ekibi">
+                </div>
+                <div class="why-us-content">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Neden Biz?
+                    </div>
+                    <h2>Güvenliğiniz İçin En İyi Tercih</h2>
+                    <p>10 yıllık deneyimimiz ve uzman kadromuzla, eviniz ve iş yeriniz için en uygun güvenlik çözümlerini sunuyoruz.</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Ücretsiz Keşif</h4>
+                                <p>Uzman ekibimiz yerinize gelerek ihtiyaç analizi yapar.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Profesyonel Kurulum</h4>
+                                <p>Sertifikalı teknisyenlerimiz ile hızlı ve temiz kurulum.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>7/24 Teknik Destek</h4>
+                                <p>Acil durumlarda her zaman ulaşabileceğiniz destek hattı.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Garanti & Sigorta</h4>
+                                <p>Tüm ürünlerimiz garantili ve sigorta kapsamındadır.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2V9h2v8zm4 0h-2V7h2v10zm-8 0H6v-6h2v6z"/>
+                    </svg>
+                    Nasıl Çalışırız?
+                </div>
+                <h2 class="section-title">4 Adımda Güvenlik Çözümü</h2>
+                <p class="section-description">Sizin için en uygun güvenlik sistemini belirleyip kuruyoruz.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>İletişim</h3>
+                    <p>Bizi arayın veya formu doldurun. Güvenlik ihtiyaçlarınızı dinleyelim.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Ücretsiz Keşif</h3>
+                    <p>Uzman ekibimiz yerinize gelerek detaylı inceleme ve analiz yapar.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Teklif</h3>
+                    <p>İhtiyaçlarınıza özel, detaylı ve şeffaf fiyat teklifi sunuyoruz.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Kurulum</h3>
+                    <p>Profesyonel ekibimiz sisteminizi hızlı ve temiz bir şekilde kurar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    Müşteri Yorumları
+                </div>
+                <h2 class="section-title">Müşterilerimiz Ne Diyor?</h2>
+                <p class="section-description">500'den fazla mutlu müşterimizden bazılarının görüşleri.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Evimize alarm ve kamera sistemi kurdurduk. Ekip çok profesyonel ve işinin ehli. Artık çok daha güvende hissediyoruz."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AY</div>
+                        <div class="author-info">
+                            <h4>Ahmet Yılmaz</h4>
+                            <span>Ev Sahibi, Kadıköy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Mağazamıza kurulan güvenlik sistemi sayesinde hırsızlık girişimini önledik. Nexus'a çok teşekkür ederiz. Kesinlikle tavsiye ederim."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Mehmet Kaya</h4>
+                            <span>İşletme Sahibi, Beşiktaş</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Fabrikamız için kapsamlı bir güvenlik projesi hazırladılar. Erişim kontrol ve kamera sistemleri mükemmel çalışıyor. 7/24 destek gerçekten var."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SÖ</div>
+                        <div class="author-info">
+                            <h4>Selim Öztürk</h4>
+                            <span>Fabrika Müdürü, Tuzla</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-content">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+                        </svg>
+                        Sıkça Sorulan Sorular
+                    </div>
+                    <h2>Merak Edilenler</h2>
+                    <p>Güvenlik sistemleri hakkında en çok sorulan sorular ve cevapları.</p>
+                    <a href="iletisim.html" class="btn btn-primary">Daha Fazla Soru? Bize Ulaşın →</a>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Kurulum ne kadar sürer?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Standart bir ev kurulumu genellikle 2-4 saat içinde tamamlanır. İş yeri ve fabrika kurulumları projenin kapsamına göre 1-3 gün sürebilir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Garanti süresi ne kadar?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tüm ürünlerimiz 2 yıl üretici garantisi kapsamındadır. Ayrıca işçilik garantisi de sunuyoruz.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Uzaktan izleme yapabilir miyim?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Evet, kurduğumuz tüm sistemleri akıllı telefonunuzdan veya bilgisayarınızdan canlı olarak izleyebilirsiniz. Ücretsiz mobil uygulama desteği sunuyoruz.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ödeme seçenekleri nelerdir?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nakit, kredi kartı ve 12 aya varan taksit seçenekleri sunuyoruz. Kurumsal müşterilerimiz için özel ödeme planları da mevcuttur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-content">
+                    <h2>Güvenliğiniz İçin İlk Adımı Atın</h2>
+                    <p>Ücretsiz keşif ve fiyat teklifi için hemen bize ulaşın.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="iletisim.html" class="btn btn-primary">Teklif Alın →</a>
+                    <a href="tel:+905001234567" class="btn btn-outline-white">Hemen Arayın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <div class="container">
+            <div class="brands-inner">
+                <img src="images/logos/hikvision.png" alt="Hikvision">
+                <img src="images/logos/dahua.png" alt="Dahua">
+                <img src="images/logos/ajax.png" alt="Ajax">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Nexus <span>Güvenlik</span></span>
+                    </a>
+                    <p>Profesyonel güvenlik sistemleri kurulumu ve bakımı. Eviniz ve iş yeriniz için en iyi çözümler.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Hizmetler</h4>
+                    <ul class="footer-links">
+                        <li><a href="hizmetler.html#alarm">Alarm Sistemleri</a></li>
+                        <li><a href="hizmetler.html#kamera">Güvenlik Kameraları</a></li>
+                        <li><a href="hizmetler.html#yangin">Yangın Algılama</a></li>
+                        <li><a href="hizmetler.html#erisim">Erişim Kontrol</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Şirket</h4>
+                    <ul class="footer-links">
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>İletişim</h4>
+                    <ul class="footer-contact">
+                        <li>İstanbul, Türkiye</li>
+                        <li>0500 123 45 67</li>
+                        <li>info@nexusguvenlik.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexus Güvenlik. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
