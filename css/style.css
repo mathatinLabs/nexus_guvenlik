@@ -1206,6 +1206,9 @@ p {
 .about-image img {
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .values {
@@ -1435,6 +1438,24 @@ p {
         --header-height: 70px;
     }
 
+    /* Section padding reductions */
+    .services,
+    .why-us,
+    .process,
+    .testimonials,
+    .faq,
+    .cta,
+    .about-intro,
+    .values,
+    .services-page,
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
     .nav-menu {
         display: none;
         position: fixed;
@@ -1594,6 +1615,10 @@ p {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .hero-stats {
         flex-direction: column;
         gap: 1.5rem;
@@ -1604,6 +1629,10 @@ p {
         text-align: center;
     }
 
+    .stat-number {
+        font-size: 2rem;
+    }
+
     .cta-buttons {
         flex-direction: column;
         width: 100%;
@@ -1611,5 +1640,122 @@ p {
 
     .cta-buttons .btn {
         width: 100%;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero-slides {
+        height: auto;
+        min-height: 320px;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .why-us-content,
+    .about-content {
+        padding: 0;
+    }
+
+    .page-header {
+        padding-top: calc(var(--header-height) + 3rem);
+        padding-bottom: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .process-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.9375rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+
+    .cta {
+        padding: 3rem 0;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 }
