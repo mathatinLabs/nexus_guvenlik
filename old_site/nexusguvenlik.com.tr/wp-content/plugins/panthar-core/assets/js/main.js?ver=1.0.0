@@ -1,0 +1,781 @@
+;(function ($) {
+
+    "use strict";
+    /*---------------------------------------------------
+      * Initialize all widget js in elementor init hook
+      ---------------------------------------------------*/     
+    const pathar_rtl = ($("html").attr("dir") == "rtl") ? true : false;
+    
+    $(window).on('elementor/frontend/init', function () {
+
+        // gallery Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-gallery-slider-widget.default', function ($scope) {
+            activeGallerySliderOne($scope);
+        });
+        
+        // banner slider 1
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-banner-slider-widget.default', function ($scope) {
+            activeBannerSliderOne($scope);
+        });
+        // banner slider 2
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-banner-slider-two-widget.default', function ($scope) {
+            activeCasestudySliderOne($scope);
+        });
+        // banner slider 3
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-banner-slider-three-widget.default', function ($scope) {
+            activeBannerSliderThree($scope);
+        });
+
+        // core value Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-core-value-widget.default', function ($scope) {
+            activeCorevalueSlider($scope);
+        });
+        // Team Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-team-slider-widget.default', function ($scope) {
+            activeTeamSliderOne($scope);
+        });
+        // casestudy Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-case-study-slider-widget.default', function ($scope) {
+            activeCasestudySliderOne($scope);
+        });
+        // testimonial one Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-testimonial-widget.default', function ($scope) {
+            activetesTestimonialSliderOne($scope);
+        });
+        // history one Slider
+        elementorFrontend.hooks.addAction('frontend/element_ready/panthar-history-slider.default', function ($scope) {
+            activeHistorySliderJour($scope);
+            activeHistorySliderJourex($scope);
+        });
+        //progressBar
+        elementorFrontend.hooks.addAction('frontend/element_ready/global', function ($scope, $) {
+            progressBarInit();
+            progressBarInitTwo();
+        });
+
+    });
+
+    /*----------------------------
+        gallery Slider
+    * --------------------------*/
+    function activeGallerySliderOne($scope) {
+        var el = $scope.find('.gallery-member-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '450px',
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '200px'
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '150px'
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '120px'
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '0'
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+
+    /*----------------------------
+        banner slider one
+    * --------------------------*/
+    function activeBannerSliderOne($scope) {
+
+        var el = $scope.find('.banner-one-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            rtl: pathar_rtl,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+
+    /*----------------------------
+        banner slider three
+    * --------------------------*/
+    function activeBannerSliderThree($scope) {
+
+        var el = $scope.find('.banner-three-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            rtl: pathar_rtl,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+
+
+    /*----------------------------------
+       Corevalue slider
+    --------------------------------*/
+    function activeCorevalueSlider($scope) {
+        var el = $scope.find('.core-value-carousel')
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 1) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return;
+        }
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: elSettings.centerpadding + 'px',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            cssEase: 'linear',
+            rtl: pathar_rtl,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+
+    /*----------------------------
+         Team Member Slider
+    * --------------------------*/
+    function activeTeamSliderOne($scope) {
+        var el = $scope.find('.team-member-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            rtl: pathar_rtl,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+    var $scprogressBar = $('.slider-controlprogress');
+    var $progressBarLabel = $( '.slider__label_Progress' );
+    $('.team-member-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+        var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        $scprogressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc );
+
+        $progressBarLabel.text( calc + '% completed' );
+    });
+    //slick init function
+    function wowSlickInit($selector, settings, animateOut = false) {
+        $($selector).slick(settings);
+    }
+
+
+    /*----------------------------
+    * Testimonial Slider
+    * --------------------------*/
+    function activeTestimonialSliderOne($scope) {
+        var el = $scope.find('.testimonial-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            vertical: elSettings.vertical === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            centerPadding: elSettings.centerpadding + 'px',
+            cssEase: 'linear',
+            rtl: pathar_rtl,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+
+    }
+
+    /*----------------------------
+        Casestudy Slider
+    * --------------------------*/
+    function activeCasestudySliderOne($scope) {
+        var el = $scope.find('.case-study-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+  
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            cssEase: 'linear',
+            rtl: pathar_rtl,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+    var $scprogressBar = $('.slider-controlprogress');
+    var $progressBarLabel = $( '.slider__label_Progress' );
+    $('.case-study-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+        var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        $scprogressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc );
+
+        $progressBarLabel.text( calc + '% completed' );
+    });
+    //slick init function
+    function wowSlickInit($selector, settings, animateOut = false) {
+        $($selector).slick(settings);
+    }
+
+    /*----------------------------------------------
+        testimonial Slider
+    * --------------------------------------------*/
+    function activetesTestimonialSliderOne($scope) {
+        var el = $scope.find('.testimonial-carousel');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+        let $selector = '#' + el.attr('id');
+        let sliderSettings = { 
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            fade: elSettings.fade === 'yes',
+            arrows:  elSettings.nav === 'yes',
+            dots:  elSettings.dot === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            cssEase: 'linear',
+            rtl: pathar_rtl,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+    }
+    var $scprogressBar = $('.slider-controlprogress');
+    var $progressBarLabel = $( '.slider__label_Progress' );
+    $('.testimonial-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+        var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        $scprogressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc );
+
+        $progressBarLabel.text( calc + '% completed' );
+    });
+    //slick init function
+    function wowSlickInit($selector, settings, animateOut = false) {
+        $($selector).slick(settings);
+    };
+
+    /*----------------------------------------------
+        History Slider one
+    * --------------------------------------------*/
+    function activeHistorySliderJour($scope) {
+        var el = $scope.find('.history-slider-one');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: elSettings.items,
+            slidesToScroll: 1,
+            arrows: elSettings.nav === 'yes',
+            appendArrows: $scope.find('.history-slider-controls .slider-nav'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            asNavFor: '.history-slider-two',
+            dots: false,
+            fade: true,
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0',
+            cssEase: 'linear',
+            rtl: pathar_rtl,
+         
+        }
+        wowSlickInit($selector, sliderSettings);
+
+    }
+    var $scprogressBar = $('.slider-controlprogress');
+    var $progressBarLabel = $( '.slider__label_Progress' );
+    $('.history-slider-one').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+        var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        $scprogressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc );
+
+        $progressBarLabel.text( calc + '% completed' );
+    });
+
+    /*----------------------------------------------
+        History Slider two
+    * --------------------------------------------*/
+    function activeHistorySliderJourex($scope) {
+        var el = $scope.find('.history-slider-two');
+        var elSettings = el.data('settings');
+        if ((el.children('div').length < 2) || (elSettings.items === '0' || elSettings.items === '' || typeof elSettings.items == 'undefined')) {
+            return
+        }
+
+        let $selector = '#' + el.attr('id');
+
+        let sliderSettings = {
+            infinite: elSettings.loop === 'yes',
+            slidesToShow: 13,
+            slidesToScroll: 1,
+            centerMode: elSettings.center === 'yes',
+            centerPadding: '0px',
+            arrows:  elSettings.nav === 'yes',
+            appendArrows: $scope.find('.slick-carousel-controls .slider-nav'),
+            appendDots: $scope.find('.slick-carousel-controls .slider-dots'),
+            prevArrow: '<div class="prev-arrow">' + elSettings.navleft + '</div>',
+            nextArrow: '<div class="next-arrow">' + elSettings.navright + '</div>',
+            asNavFor: '.history-slider-one',
+            dots: false,
+            autoplaySpeed: elSettings.autoplaytimeout,
+            autoplay: elSettings.autoplay === 'yes',
+            focusOnSelect: true,
+            rtl: pathar_rtl,
+            responsive: [
+
+                {
+                    breakpoint: 1920,
+                    settings: {
+                      slidesToShow: 13,
+                      slidesToScroll: 1
+                    }
+                },
+
+                {
+                    breakpoint: 1200,
+                    settings: {
+                      slidesToShow: 9,
+                      slidesToScroll: 1
+                    }
+                },
+
+                {
+                    breakpoint: 960,
+                    settings: {
+                      slidesToShow: 7,
+                      slidesToScroll: 1
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 5,
+                      slidesToScroll: 1
+                    }
+                },
+
+                {
+                  breakpoint: 599,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                  }
+                },
+
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+
+
+            ]
+        }
+        wowSlickInit($selector, sliderSettings);
+
+    }
+
+
+    /*------------------------------
+            counter section activation
+          -------------------------------*/
+    function counterupInit($scope) {
+        $scope.counterUp({
+            delay: 20,
+            time: 3000
+        });
+    }
+
+    // pie-chart
+    function progressBarInitTwo() {
+        var progressChart = $('.chart');
+        progressChart.easyPieChart({
+            size: 130,
+            barColor: '#7CB82F',
+            scaleColor: false,
+            lineWidth: 8,
+            trackColor: '#F1F1F1',
+            lineCap: 'circle',
+            animate: 2000
+        });
+    }
+
+
+    $('.gallery-item-wrap').isotope(function(){
+      itemSelector:'.item'
+    });
+    $('.gallery-menu ul li').click(function(){
+        $('.gallery-menu ul li').removeClass('active');
+        $(this).addClass('active');
+
+
+        var selector = $(this).attr('data-filter');
+        $('.gallery-item-wrap').isotope({
+            filter: selector
+        })
+        return false;
+    });
+
+    /*------------------------------
+    *    Progressbar init
+    * ------------------------------*/
+    function progressBarInit() {
+        var neatProgressInit = $('.neaterller-progress-init');
+        if (neatProgressInit.length > 0) {
+            neatProgressInit.each(function (value) {
+                var eel = $(this);
+                eel.rProgressbar({
+                    percentage: eel.data('percent'),
+                    fillBackgroundColor: eel.data('fillbgcolor')
+                });
+            });
+        }
+    }
+
+    $(document).ready(function () {
+        /*--------------------
+          wow js init
+      ---------------------*/
+        new WOW().init();
+
+        /*---------------------------------
+        * Magnific Popup
+        * --------------------------------*/
+        $('.video-play-btn,.video-play-btn-02,.play-video-btn,.button-video').magnificPopup({
+            type: 'video'
+        });
+
+        //Call Widget
+        $('.call-widget-btn').on('click', function(){
+            $('.call-widget-wrapper').toggleClass('open');
+        });
+        // book + - start here
+        $(function () {
+            $(".qtybutton").on("click", function () {
+                var $button = $(this);
+                var oldValue = $button.parent().find("input").val();
+                if ($button.text() === "+") {
+                    var newVal = parseFloat(oldValue) + 1;
+                } else {
+                    // Don't allow decrementing below zero
+                    if (oldValue > 1) {
+                        var newVal = parseFloat(oldValue) - 1;
+                    } else {
+                        newVal = 1;
+                    }
+                }
+                $button.parent().find("input").val(newVal);
+            });
+        });
+
+    });
+
+})(jQuery);
+
